@@ -7,7 +7,8 @@
   :deploy-repositories [["github" {:url "https://maven.pkg.github.com/bardcollege/idm.log"
                                    ; causes leiningen to look for LEIN_USERNAME and LEIN_PASSWORD
                                    :username :env
-                                   :password :env}]]
+                                   :password :env
+                                   :sign-releases false}]]
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [org.clojure/tools.logging "1.1.0"]
                  [org.apache.logging.log4j/log4j-api "2.13.3"]
