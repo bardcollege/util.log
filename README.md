@@ -27,6 +27,12 @@ referred by name, e.g.:
     [idm.log :refer [passf]]))
 ```
 
+## Configuration
+If you need to configure the underlying log engine (Log4j2), simply copy
+[`log4j2.yml`](resources/log4j2.yml) into your classpath (i.e., `resources/`)
+and make requisite changes - it will override the one provided here.
+
+
 ## License
 
 Copyright © 2021 Bard College
