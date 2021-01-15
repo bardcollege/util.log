@@ -95,9 +95,7 @@
       another-thing)
   ```
 
-  That's right: this is a macro so I can use `log/spy` with (-> ).
-
-  The single arrow denotes thread-first."
+  That's right: this is a macro so I can use `log/spy` with (-> )."
   [expr & args]
   `(log/spy ~@args ~expr))
 
