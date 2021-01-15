@@ -1,14 +1,35 @@
 # idm.log
 
-A Clojure library designed to ... well, that part is up to you.
+Basic set of dependencies and configuration to get logging working. Custom
+helper macros are provided in `idm.log`.
 
 ## Usage
 
-FIXME
+Leiningen dependency:
+```clojure
+[edu.bard/idm.log "0.1.0-SNAPSHOT"]
+```
+
+Clojure [tools.logging](https://github.com/clojure/tools.logging) is included
+as a dependency; for the majority of operations, it should suffice:
+```clojure
+(ns some-ns
+  (:require
+     [clojure.tools.logging :as log]))
+```
+
+For special use cases, use the macros in `idm.log`; generally these are
+referred by name, e.g.:
+```clojure
+(ns some-ns
+  (:require
+    [clojure.tools.logging :as log]
+    [idm.log :refer [passf]]))
+```
 
 ## License
 
-Copyright © 2021 FIXME
+Copyright © 2021 Bard College
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
