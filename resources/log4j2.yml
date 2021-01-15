@@ -1,0 +1,69 @@
+Configuration:
+  status: warn # this is part of the default for whatever reason
+  # check for changes to log config (sort of) every 30 seconds
+  # see https://logging.apache.org/log4j/2.x/manual/configuration.html
+  monitorInterval: 30
+  Properties:
+    Property:
+      - name: log-path
+        value: "logs"
+      - name: base-pattern
+        value: "%d{dd/MMM/YYYY:HH:mm:ss.SSS} [%t] %p %c - %m%n"
+        #value: "%d [%t] %p %c - %m%n"
+      - name: log-pattern
+        #value: "%highlight{%d{dd/MMM/YYYY:HH:mm:ss.SSS} [%t] %p %c - %m%n}{FATAL=red blink, ERROR=red, WARN=yellow bold, INFO=black, DEBUG=green bold, TRACE=blue}"
+        value: "%highlight{${base-pattern}}{FATAL=red blink, ERROR=red, WARN=yellow bold, INFO=white, DEBUG=green bold, TRACE=blue}"
+  Appenders:
+    Console:
+      name: ConsoleLog
+      target: SYSTEM_OUT
+      #pattern: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+      PatternLayout:
+        pattern: ${log-pattern}
+    RollingFile:
+      - name: FileLog
+        fileName: ${log-path}/idm.log
+        filePattern: ${log-path}/idm.%i.log
+        PatternLayout: 
+          pattern: ${log-pattern}
+        #pattern: "%r [%t] %p %c %notEmpty{%x }- %m%n"
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 10MB
+        DefaultRollOverStrategy:
+          max: 10
+
+      - name: JettyLog
+        fileName: ${log-path}/jetty.log
+        filePattern: ${log-path}/jetty.%i.log
+        PatternLayout:
+          pattern: ${log-pattern}
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 10MB
+        DefaultRollOverStrategy:
+          max: 5
+
+
+
+  Loggers:
+    Root:
+      level: trace
+      AppenderRef:
+        - ref: ConsoleLog
+        - ref: FileLog
+    Logger:
+      - name: org.eclipse.jetty
+        level: DEBUG
+        additivity: false
+        AppenderRef:
+          - ref: JettyLog
+          - ref: ConsoleLog
+            level: INFO
+      - name: org.apache.http
+        additivity: false
+        AppenderRef:
+          - ref: FileLog
+          - ref: ConsoleLog
+            level: INFO
+        #level: DEBUG
