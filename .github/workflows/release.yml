@@ -31,7 +31,7 @@ jobs:
         run: LEIN_USERNAME=x-access-token LEIN_PASSWORD=${GITHUB_TOKEN} lein deploy github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Publish to clojars
-        run: CLOJARS_USER=hsartoris-bard CLOJARS_PASSWORD=${CLOJARS_TOKEN} lein deploy clojars
-        env:
-          CLOJARS_TOKEN: ${{ secrets.CLOJARS_TOKEN }}
+      #- name: Publish to clojars
+      #  run: CLOJARS_USER=hsartoris-bard CLOJARS_PASSWORD=${CLOJARS_TOKEN} lein deploy clojars
+      #  env:
+      #    CLOJARS_TOKEN: ${{ secrets.CLOJARS_TOKEN }}
