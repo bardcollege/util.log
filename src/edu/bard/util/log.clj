@@ -1,4 +1,4 @@
-(ns idm.log
+(ns edu.bard.util.log
   "Logging helper macros"
   (:require [clojure.tools.logging :as log])
   (:import [org.apache.logging.log4j.core.config Configurator]

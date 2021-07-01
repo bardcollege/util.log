@@ -1,10 +1,10 @@
-(defproject edu.bard/idm.log "0.1.4-SNAPSHOT"
-  :description "Logging baseline for Bard IdM"
-  :url "https://github.com/bardcollege/idm.log"
+(defproject edu.bard/util.log "0.1.4-SNAPSHOT"
+  :description "Logging baseline for Bard Clojure projects"
+  :url "https://github.com/bardcollege/util.log"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
             :url "https://www.eclipse.org/legal/epl-2.0/"}
-  :repl-options {:init-ns idm.log}
-  :deploy-repositories {"github" {:url "https://maven.pkg.github.com/bardcollege/idm.log"
+  :repl-options {:init-ns edu.bard.util.log}
+  :deploy-repositories {"github" {:url "https://maven.pkg.github.com/bardcollege/util.log"
                                   ; causes leiningen to look for LEIN_USERNAME and LEIN_PASSWORD
                                   :username :env
                                   :password :env

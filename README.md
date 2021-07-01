@@ -1,13 +1,13 @@
-# idm.log
+# util.log
 
 Basic set of dependencies and configuration to get logging working. Custom
-helper macros are provided in `idm.log`.
+helper macros are provided in `edu.bard.util.log`.
 
 ## Usage
 
 Leiningen dependency:
 ```clojure
-[edu.bard/idm.log "0.1.0-SNAPSHOT"]
+[edu.bard/util.log "0.1.4"]
 ```
 
 Clojure [tools.logging](https://github.com/clojure/tools.logging) is included
@@ -24,7 +24,7 @@ referred by name, e.g.:
 (ns some-ns
   (:require
     [clojure.tools.logging :as log]
-    [idm.log :refer [passf]]))
+    [edu.bard.util.log :refer [passf]]))
 ```
 
 ## Configuration
