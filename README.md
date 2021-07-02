@@ -1,4 +1,5 @@
 # util.log
+![lint status](https://github.com/bardcollege/util.log/actions/workflows/lint.yml/badge.svg)
 
 Basic set of dependencies and configuration to get logging working. Custom
 helper macros are provided in `edu.bard.util.log`.
