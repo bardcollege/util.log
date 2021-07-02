@@ -1,0 +1,4 @@
+{:linters {:missing-docstring {:level :warning}
+           :shadowed-var      {:level :warning}
+           :unsorted-required-namespaces {:level :warning}}
+ :output  {:progress true}}

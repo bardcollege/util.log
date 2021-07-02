@@ -100,6 +100,7 @@
   `(log/spy ~@args ~expr))
 
 (defmacro spyf-first
+  "Like `spy-first`, but dispatches to `log/spyf`, rather than `log/spy`."
   [expr & args]
   `(log/spyf ~@args ~expr))
 
