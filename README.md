@@ -2,13 +2,13 @@
 ![lint status](https://github.com/bardcollege/util.log/actions/workflows/lint.yml/badge.svg)
 
 Basic set of dependencies and configuration to get logging working. Custom
-helper macros are provided in `edu.bard.util.log`.
+helper macros are provided in `bard.util.log`.
 
 ## Usage
 
 Leiningen dependency:
 ```clojure
-[edu.bard/util.log "0.1.4"]
+[bard/util.log "0.1.4"]
 ```
 
 Clojure [tools.logging](https://github.com/clojure/tools.logging) is included
@@ -25,7 +25,7 @@ referred by name, e.g.:
 (ns some-ns
   (:require
     [clojure.tools.logging :as log]
-    [edu.bard.util.log :refer [passf]]))
+    [bard.util.log :refer [passf]]))
 ```
 
 ## Configuration
