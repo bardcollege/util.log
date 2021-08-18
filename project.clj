@@ -21,6 +21,7 @@
                  [org.apache.logging.log4j/log4j-slf4j-impl "2.14.1"]
                  [org.slf4j/slf4j-api "1.7.32"]
                  [com.fasterxml.jackson.dataformat/jackson-dataformat-yaml "2.12.4"]]
+  :jvm-opts ["-Dclojure.tools.logging.factory=clojure.tools.logging.impl/log4j2-factory"]
   :plugins [[com.github.liquidz/antq "RELEASE"]]
   :release-tasks [["vcs" "assert-committed"]
                   ["change" "version" "leiningen.release/bump-version" ":release"]
