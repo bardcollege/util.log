@@ -43,8 +43,16 @@ Configuration:
             size: 10MB
         DefaultRollOverStrategy:
           max: 5
-
-
+      - name: HttpLog
+        fileName: ${log-path}/org.apache.http.log
+        filePattern: ${log-path}/org.apache.http.%i.log
+        PatternLayout:
+          pattern: ${log-pattern}
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 10MB
+        DefaultRollOverStrategy:
+          max: 5
 
   Loggers:
     Root:
@@ -63,7 +71,7 @@ Configuration:
       - name: org.apache.http
         additivity: false
         AppenderRef:
-          - ref: FileLog
+          - ref: HttpLog
           - ref: ConsoleLog
             level: INFO
         #level: DEBUG
