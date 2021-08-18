@@ -1,4 +1,4 @@
-(defproject edu.bard/util.log "0.1.8-SNAPSHOT"
+(defproject edu.bard/util.log "0.1.8"
   :description "Logging baseline for Bard Clojure projects"
   :url "https://github.com/bardcollege/util.log"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
