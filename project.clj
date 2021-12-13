@@ -14,13 +14,14 @@
                                    :password :env/clojars_password
                                    :sign-releases false}}
   :dependencies [[org.clojure/clojure "1.10.3"]
-                 [org.clojure/tools.logging "1.1.0"]
-                 [org.apache.logging.log4j/log4j-api "2.14.1"]
-                 [org.apache.logging.log4j/log4j-core "2.14.1"]
-                 [org.apache.logging.log4j/log4j-jcl "2.14.1"]
-                 [org.apache.logging.log4j/log4j-slf4j-impl "2.14.1"]
+                 [org.clojure/tools.logging "1.2.1"]
+                 [org.apache.logging.log4j/log4j-api "2.15.0"]
+                 [org.apache.logging.log4j/log4j-core "2.15.0"]
+                 [org.apache.logging.log4j/log4j-jcl "2.15.0"]
+                 [org.apache.logging.log4j/log4j-slf4j-impl "2.15.0"]
                  [org.slf4j/slf4j-api "1.7.32"]
-                 [com.fasterxml.jackson.dataformat/jackson-dataformat-yaml "2.12.4"]]
+                 ;; TODO: figure out why this is necessary
+                 [com.fasterxml.jackson.dataformat/jackson-dataformat-yaml "2.13.0"]]
   :jvm-opts ["-Dclojure.tools.logging.factory=clojure.tools.logging.impl/log4j2-factory"]
   :plugins [[com.github.liquidz/antq "RELEASE"]]
   :release-tasks [["vcs" "assert-committed"]
