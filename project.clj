@@ -15,10 +15,10 @@
                                    :sign-releases false}}
   :dependencies [[org.clojure/clojure "1.10.3"]
                  [org.clojure/tools.logging "1.2.1"]
-                 [org.apache.logging.log4j/log4j-api "2.15.0"]
-                 [org.apache.logging.log4j/log4j-core "2.15.0"]
-                 [org.apache.logging.log4j/log4j-jcl "2.15.0"]
-                 [org.apache.logging.log4j/log4j-slf4j-impl "2.15.0"]
+                 [org.apache.logging.log4j/log4j-api "2.17.1"]
+                 [org.apache.logging.log4j/log4j-core "2.17.1"]
+                 [org.apache.logging.log4j/log4j-jcl "2.17.1"]
+                 [org.apache.logging.log4j/log4j-slf4j-impl "2.17.1"]
                  [org.slf4j/slf4j-api "1.7.32"]
                  ;; TODO: figure out why this is necessary
                  [com.fasterxml.jackson.dataformat/jackson-dataformat-yaml "2.13.0"]]
